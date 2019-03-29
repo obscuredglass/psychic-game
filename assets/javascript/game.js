@@ -5,7 +5,7 @@ var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
-var userGuess = [];
+var letterGuess = [];
 
 
 
@@ -15,7 +15,7 @@ console.log("computers guess: ", computerGuess);
 
 function calculatGuesses() {
   document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
-  document.getElementById("letter").innerHTML = "Your Guesses so far: " + userGuess.join(', ');
+  document.getElementById("letter").innerHTML = "Your Guesses so far: " + letterGuess.join(', ');
 }
 
 
@@ -23,7 +23,7 @@ calculatGuesses();
 
 var restart = function() {
 	guessesLeft = 9;
-	userGuess = [];
+	letterGuess = [];
 	computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
 
@@ -33,7 +33,7 @@ document.onkeyup = function(event) {
 
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
   console.log("current guess: ",  userGuess);
-	userGuess.push(userGuess);
+	letterGuess.push(userGuess);
 	calculatGuesses();
 
 	if (userGuess === computerGuess){
