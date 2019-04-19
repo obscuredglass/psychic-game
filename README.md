@@ -7,6 +7,8 @@ This is a guessing game that you have 10 chances to guess what the website is th
 3. JavaScript
 4. Google Fonts
 
+https://obscuredglass.github.io/psychic-game/
+
 ### Screenshot:
 
 ![mywebsite](/assets/images/mywebsite.png)
